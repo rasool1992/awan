@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سياسة الخصوصية - أوان | Privacy Policy - Awan</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --emerald: #2ecc71;
+      --emerald-dark: #27ae60;
+      --emerald-glow: rgba(46, 204, 113, 0.15);
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #1c2128;
+      --border: rgba(46, 204, 113, 0.12);
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --gold: #d4a843;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Cairo', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Background ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(46, 204, 113, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 30% at 90% 80%, rgba(46, 204, 113, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Language Toggle ── */
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 100;
+      display: flex;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 4px;
+    }
+
+    .lang-btn {
+      padding: 6px 16px;
+      border-radius: 24px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Cairo', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all 0.2s;
+      background: transparent;
+      color: var(--text-muted);
+    }
+
+    .lang-btn.active {
+      background: var(--emerald);
+      color: #000;
+    }
+
+    /* ── Header ── */
+    header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 80px 20px 60px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--emerald-dark), var(--emerald));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 36px;
+      box-shadow: 0 0 40px rgba(46, 204, 113, 0.3);
+    }
+
+    header h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    header h1 span {
+      color: var(--emerald);
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 12px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--emerald-glow);
+      border: 1px solid var(--border);
+      color: var(--emerald);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+
+    /* ── Main ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 50px 24px 80px;
+    }
+
+    /* ── Section ── */
+    .section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      transition: border-color 0.3s;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .section:hover {
+      border-color: rgba(46, 204, 113, 0.3);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .section:nth-child(2) {
+      animation-delay: 0.10s;
+    }
+
+    .section:nth-child(3) {
+      animation-delay: 0.15s;
+    }
+
+    .section:nth-child(4) {
+      animation-delay: 0.20s;
+    }
+
+    .section:nth-child(5) {
+      animation-delay: 0.25s;
+    }
+
+    .section:nth-child(6) {
+      animation-delay: 0.30s;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--emerald-glow);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .section p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+
+    .section ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .section ul li {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      padding-right: 20px;
+      position: relative;
+    }
+
+    html[lang="en"] .section ul li {
+      padding-right: 0;
+      padding-left: 20px;
+    }
+
+    .section ul li::before {
+      content: '✓';
+      position: absolute;
+      right: 0;
+      color: var(--emerald);
+      font-weight: 700;
+    }
+
+    html[lang="en"] .section ul li::before {
+      right: auto;
+      left: 0;
+    }
+
+    .highlight {
+      background: var(--emerald-glow);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      color: var(--emerald);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ── Contact ── */
+    .contact-section {
+      background: linear-gradient(135deg, rgba(46, 204, 113, 0.08), rgba(46, 204, 113, 0.03));
+      border: 1px solid rgba(46, 204, 113, 0.25);
+      border-radius: 16px;
+      padding: 28px 32px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--emerald);
+      margin-bottom: 8px;
+    }
+
+    .contact-section p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* ── Lang switching ── */
+    .ar-content {
+      display: block;
+    }
+
+    .en-content {
+      display: none;
+    }
+
+    html[lang="en"] .ar-content {
+      display: none;
+    }
+
+    html[lang="en"] .en-content {
+      display: block;
+    }
+
+    html[lang="en"] body {
+      font-family: 'Tajawal', sans-serif;
+      direction: ltr;
+    }
+
+    html[lang="en"] .section ul li {
+      direction: ltr;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('ar')">عربي</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="app-icon">🕌</div>
+    <h1 class="ar-content">سياسة الخصوصية - <span>أوان</span></h1>
+    <h1 class="en-content">Privacy Policy - <span>Awan</span></h1>
+    <div class="badge ar-content">مواقيت الصلاة</div>
+    <div class="badge en-content">Prayer Times App</div>
+    <p class="subtitle ar-content">آخر تحديث: مارس 2026</p>
+    <p class="subtitle en-content">Last updated: March 2026</p>
+  </header>
+
+  <main>
+
+    <!-- 1. مقدمة -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📋</div>
+        <h2 class="ar-content">مقدمة</h2>
+        <h2 class="en-content">Introduction</h2>
+      </div>
+      <p class="ar-content">
+        مرحباً بك في تطبيق <strong style="color:var(--emerald)">أوان</strong>. نحن نحترم خصوصيتك ونلتزم بحماية بياناتك
+        الشخصية. توضح هذه السياسة كيفية تعاملنا مع المعلومات التي يتم جمعها أثناء استخدامك للتطبيق.
+      </p>
+      <p class="en-content">
+        Welcome to <strong style="color:var(--emerald)">Awan</strong>. We respect your privacy and are committed to
+        protecting your personal data. This policy explains how we handle information collected during your use of the
+        app.
+      </p>
+    </div>
+
+    <!-- 2. البيانات التي نجمعها -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">📍</div>
+        <h2 class="ar-content">البيانات التي نجمعها</h2>
+        <h2 class="en-content">Data We Collect</h2>
+      </div>
+      <p class="ar-content">نجمع البيانات الضرورية فقط لتقديم الخدمة:</p>
+      <p class="en-content">We collect only the data necessary to provide the service:</p>
+      <ul>
+        <li class="ar-content"><strong>الموقع الجغرافي:</strong> نستخدم موقعك لحساب أوقات الصلاة بدقة لمنطقتك</li>
+        <li class="en-content"><strong>Location:</strong> We use your location to accurately calculate prayer times for
+          your area</li>
+        <li class="ar-content"><strong>اسم المدينة:</strong> يُخزَّن محلياً على جهازك فقط لعرضه في التطبيق</li>
+        <li class="en-content"><strong>City Name:</strong> Stored locally on your device only for display purposes</li>
+        <li class="ar-content"><strong>إعدادات التطبيق:</strong> التفضيلات كالثيم وحجم النص وإعدادات الإشعارات</li>
+        <li class="en-content"><strong>App Settings:</strong> Preferences such as theme, font size, and notification
+          settings</li>
+      </ul>
+      <div class="highlight ar-content">
+        🔒 لا نجمع أي بيانات شخصية مثل الاسم أو البريد الإلكتروني أو رقم الهاتف
+      </div>
+      <div class="highlight en-content">
+        🔒 We do not collect any personal data such as name, email, or phone number
+      </div>
+    </div>
+
+    <!-- 3. كيف نستخدم البيانات -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">⚙️</div>
+        <h2 class="ar-content">كيف نستخدم البيانات</h2>
+        <h2 class="en-content">How We Use Data</h2>
+      </div>
+      <ul>
+        <li class="ar-content">حساب أوقات الصلاة بدقة بناءً على موقعك الجغرافي</li>
+        <li class="en-content">Calculate accurate prayer times based on your geographic location</li>
+        <li class="ar-content">إرسال إشعارات تذكيرية بأوقات الصلاة (إذا فعّلت هذه الميزة)</li>
+        <li class="en-content">Send reminder notifications for prayer times (if you enable this feature)</li>
+        <li class="ar-content">حفظ إعداداتك وتفضيلاتك للمرات القادمة</li>
+        <li class="en-content">Save your settings and preferences for future use</li>
+      </ul>
+    </div>
+
+    <!-- 4. مشاركة البيانات -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🤝</div>
+        <h2 class="ar-content">مشاركة البيانات مع أطراف ثالثة</h2>
+        <h2 class="en-content">Sharing Data with Third Parties</h2>
+      </div>
+      <p class="ar-content">
+        نستخدم خدمة خارجية لجلب أوقات الصلاة وهي:
+        <strong style="color:var(--emerald)">hq.alkafeel.net</strong>.
+        يتم إرسال بيانات الموقع (خط الطول، دائرة العرض، المنطقة الزمنية) إلى هذه الخدمة فقط لغرض حساب الأوقات.
+      </p>
+      <p class="en-content">
+        We use an external service to fetch prayer times:
+        <strong style="color:var(--emerald)">hq.alkafeel.net</strong>.
+        Location data (longitude, latitude, timezone) is sent to this service solely for the purpose of calculating
+        prayer times.
+      </p>
+      <div class="highlight ar-content">
+        🚫 لا نبيع أو نشارك بياناتك مع أي طرف ثالث لأغراض تجارية أو إعلانية
+      </div>
+      <div class="highlight en-content">
+        🚫 We do not sell or share your data with any third party for commercial or advertising purposes
+      </div>
+    </div>
+
+    <!-- 5. تخزين البيانات -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">💾</div>
+        <h2 class="ar-content">تخزين البيانات وأمانها</h2>
+        <h2 class="en-content">Data Storage & Security</h2>
+      </div>
+      <ul>
+        <li class="ar-content">جميع البيانات تُخزَّن محلياً على جهازك فقط</li>
+        <li class="en-content">All data is stored locally on your device only</li>
+        <li class="ar-content">لا توجد خوادم خاصة بنا تحتفظ ببياناتك</li>
+        <li class="en-content">We have no servers that retain your data</li>
+        <li class="ar-content">يمكنك حذف جميع البيانات بإلغاء تثبيت التطبيق</li>
+        <li class="en-content">You can delete all data by uninstalling the app</li>
+      </ul>
+    </div>
+
+    <!-- 6. أذونات التطبيق -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon">🔑</div>
+        <h2 class="ar-content">أذونات التطبيق</h2>
+        <h2 class="en-content">App Permissions</h2>
+      </div>
+      <ul>
+        <li class="ar-content"><strong>الموقع الجغرافي:</strong> مطلوب لحساب أوقات الصلاة</li>
+        <li class="en-content"><strong>Location:</strong> Required to calculate prayer times</li>
+        <li class="ar-content"><strong>الإشعارات:</strong> اختياري، لإرسال تذكيرات بأوقات الصلاة</li>
+        <li class="en-content"><strong>Notifications:</strong> Optional, to send prayer time reminders</li>
+        <li class="ar-content"><strong>الإنترنت:</strong> لجلب أوقات الصلاة من الخادم</li>
+        <li class="en-content"><strong>Internet:</strong> To fetch prayer times from the server</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-section">
+      <h2 class="ar-content">تواصل معنا</h2>
+      <h2 class="en-content">Contact Us</h2>
+      <p class="ar-content">إذا كان لديك أي استفسار حول سياسة الخصوصية، يمكنك التواصل معنا عبر:</p>
+      <p class="en-content">If you have any questions about this privacy policy, you can contact us at:</p>
+      <p style="color:var(--emerald); margin-top:10px; font-weight:700;">rasool.ali01@gmail.com</p>
+      <p style="color:var(--emerald); margin-top:10px; font-weight:700;">009647802429927</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="ar-content">© 2026 تطبيق أوان - جميع الحقوق محفوظة</p>
+    <p class="en-content">© 2026 Awan App - All rights reserved</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === (lang === 'ar' ? 'عربي' : 'EN'));
+      });
+    }
+  </script>
+</body>
+
+</html>
